@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Q1- Write a program to print to duplicate elements of an array .
+        // Sample_input : [1,1,2,3,3,4,5,6,6]
+
+     /*   var arra1=[1,1,2,3,3,4,5,6,6];
+
+function find_duplicate_in_array(arra1) {
+        var object = {};
+        var result = [];
+
+        arra1.forEach(function (item) {
+          if(!object[item])
+              object[item] = 0;
+            object[item] += 1;
+        })
+
+        for (var prop in object) {
+           if(object[prop] >= 2) {
+               result.push(prop);
+           }
+        }
+
+        return result;
+
+    }
+    console.log(find_duplicate_in_array(arra1))*/
+
+
+    // Q2- Write a program to find the element with highest frequency in an array.
+    // Sample_input :[1,2,4,3,2,4,2,5,7,2]
+
+    /*var arr1=[1,2,4,3,2,4,2,5,7,2];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;*/
+
+// Question 3: Write a program to check whether a String is palindrome or not .
+
+function checkPalindrome(string) {
+
+// convert string to an array
+const arrayValues = string.split('');
+
+// reverse the array values
+const reverseArrayValues = arrayValues.reverse();
+
+// convert array to string
+const reverseString = reverseArrayValues.join('');
+
+if(string == reverseString) {
+    console.log('It is a palindrome');
+}
+else {
+    console.log('It is not a palindrome');
+}
+}
+
+//take input
+const string = prompt('Enter a string: ');
+
+checkPalindrome(string);
+
+
+    
+        
+
+
+
+    </script>
+    
+</body>
+</html>
